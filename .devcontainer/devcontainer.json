@@ -1,0 +1,20 @@
+{
+    "name": "gdb-playground Dev Container",
+    "dockerComposeFile": [
+        "../docker-compose.yaml",
+        "docker-compose.extend.yaml"
+    ],
+    "service": "gdb-playground",
+    "workspaceFolder": "/playground/src/",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "VisualStudioExptTeam.vscodeintellicode",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode.cpptools-extension-pack",
+        "DamianKoper.gdb-debug",
+        "maziac.asm-code-lens",
+        "whiteout2.x86",
+        "1nvitr0.valgrind-task-integration"
+    ],
+    "settings": {}
+}

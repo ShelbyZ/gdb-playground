@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  gdb-playground:
+    build:
+      context: .
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    volumes:
+      - gdb-src:/playground/src
+      - ./scratch:/playground/src/scratch
+      - gdb-playground-extensions:/root/.vscode-server/extensions
+      - gdb-playground-extensions-insiders:/root/.vscode-server-insiders/extensions
+
+volumes:
+  gdb-src:
+  gdb-playground-extensions:
+  gdb-playground-extensions-insiders:
